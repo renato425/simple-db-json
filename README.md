@@ -1,77 +1,34 @@
-# Simple DB Json
-Simples e leve banco de dados em JSON para NodeJS
-# Instalação
-```
-npm install simple-db-json
-```
-# Uso
-## Iniciando
-```js
-const sdbj = require('simple-db-json')
-const db = new sdbj('nome do arquivo', 'espaços do json (valor recomendado => \t)')
-```
+---
+description: Iniciando com SimpleDBJson
+---
 
-Lembrando que a biblioteca ainda está em versão BETA e usa a forma síncrona. Mais opções de uso em breve.
+# Introdução
 
-***AVISO: Todo o método utilizado pelo sdbj, retorna outros métodos para sua utilização***
+O SimpleDBJson \(ou SDBJ\) foi criado com o objetivo de ajudar devs iniciantes a usarem um banco de dados em JSON.
 
-Retorno:
-Key | Tipo | Descrição 
-----|------|-----------
-this | indefinido... pode ser uma string, ou um objeto, ou um array ou um boolean | Retorna o valor pedido, `has` por exemplo retorna boolean, agora `get` retorna o valor salvo
-has | function | Função has do sdbj
-get | function | Função get do sdbj
-set | function | Função set do sdbj
-remove | function | Função remove do sdbj
-all | object | Retorna todo o conteúdo dentro do JSON como um objeto.
+Usando o SDBJ, Você pode facilmente usar um banco de dados em JSON em quaisquer dos seus projetos... onde queremos fazer atualizações de uso em nossa biblioteca! \(colaborações são bem vindas!\)
 
-## Setando uma chave
-```js
-db.set('property_name', 'property_content')
-```
-A chave `property_name` é uma string... podemos dizer que é o nome do valor
+## Exemplos
 
-## Verificando pra saber se existe tal chave.
-```js
-db.has('property_name')
-```
-A chave `property_name` é uma string... a chave no qual vai ser verificada...
+Exemplos simples de uso do SDBJ
 
-## Retornando todo o JSON como objeto
-```js
-db.all()
-```
-Retorna o JSON como objeto... igual ao objeto do AVISO acima
+#### Gerando um objeto salvo e setando dentro dele
 
-## Coletando uma chave
-```js
-db.get('property_name')
-```
-A chave `property_name` é uma string... onde vai conter o valor retornado.
+```text
+const SDBJ = require('simple-db-json')
+const db = new SDBJ('db', '\t')
 
-## Removendo uma chave
-```js
-db.remove('property_name')
+db.get('object').set('content', 0)
 ```
 
-A chave `property_name` é uma string... onde vai ter a chave para deletar do JSON
+#### Sabendo se existe um conteúdo e editando ele:
 
-# Utilizando
-
-Você vai poder criar objetos e arrays!
-
-* Exemplo 1:
-```js
-db.set('objeto1', {
-    feijão: 'com batata doce', 
-    arroz: 'com farofa!'
-})
+```text
+if(db.get('object').has('content').this == true) {
+    let number = db.get('object').get('content').this
+    db.get('object').set('content', number + 500)    
+}
 ```
 
-* Exemplo 2:
-```js
-db.get('objects').set('objeto5', {
-    olha: 'um objeto!',
-    muito: 'legal! :)'
-})
-```
+Existem várias formas de usar o SDBJ! Essa documentação foi criada para dar exemplos aos devs e para saber como funcionam os métodos!
+
