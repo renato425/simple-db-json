@@ -1,0 +1,24 @@
+{
+  "name": "simple-db-json",
+  "version": "0.1.1-att",
+  "description": "Banco de dados em JSON.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "db",
+    "sdbj"
+  ],
+  "author": "Renato",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renato425/simple-db-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/renato425/simple-db-json/issues"
+  },
+  "homepage": "http://sdbj.epizy.com"
+}
