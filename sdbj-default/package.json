@@ -1,0 +1,25 @@
+{
+  "name": "sdbj-default",
+  "version": "0.0.1",
+  "description": "Cria um JSON default caso o mesmo não exista (package oficial SDBJ)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renato425/simple-db-json.git"
+  },
+  "keywords": [
+    "json",
+    "db",
+    "sdbj",
+    "database"
+  ],
+  "author": "Renato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renato425/simple-db-json/issues"
+  },
+  "homepage": "https://github.com/renato425/simple-db-json#readme"
+}
